@@ -1,4 +1,4 @@
-module github.com/forderation/go-standard-response
+module github.com/forderation/goobers
 
 go 1.16
 
