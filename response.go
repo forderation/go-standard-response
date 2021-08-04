@@ -33,11 +33,12 @@ func InternalServerErrorResponse(prefixServiceName string, err error, c *fiber.C
 const (
 	DataObject = iota
 	DataArray
+	DataNil
 )
 
 func NotFoundResponse(message string, typeData int, c *fiber.Ctx) (errs error) {
 	sr := StandardResponse{
-		Code:       "00",
+		Code:       "ERR-NOT-FOUND",
 		Message:    message,
 		HttpStatus: http.StatusOK,
 	}
@@ -53,7 +54,7 @@ func NotFoundResponse(message string, typeData int, c *fiber.Ctx) (errs error) {
 
 func NotFoundResponseWithPagination(message string, c *fiber.Ctx) (errs error) {
 	sr := StandardResponse{
-		Code:    "00",
+		Code:    "ERR-NOT-FOUND",
 		Message: message,
 		Data: map[string]interface{}{
 			"count": 0,
