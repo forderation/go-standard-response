@@ -2,4 +2,4 @@ The package standard response helper for golang fiber Easily maintain response s
 
 ###### Install
 
-`go get github.com/forderation/goobers`
+`go get github.com/forderation/vascommsfgo`
